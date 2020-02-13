@@ -59,51 +59,57 @@
 
 <script>
 
-    let homeownerNameInput = document.querySelector('#homeowner-name')
-    let homeownerHouseNumberInput = document.querySelector('#homeowner-house-number')
-    let homeownerStreetNameInput = document.querySelector('#homeowner-street-name')
-    let treeTypeSelect = document.querySelector('#tree-type')
-    let cityEl = document.querySelector('#city')
-    let zipEl = document.querySelector('#zipcode')
+    // initialization of all the of the element variables
+    let homeownerNameInput = document.querySelector('#homeowner-name');
+    let homeownerHouseNumberInput = document.querySelector('#homeowner-house-number');
+    let homeownerStreetNameInput = document.querySelector('#homeowner-street-name');
+    let treeTypeSelect = document.querySelector('#tree-type');
+    let cityEl = document.querySelector('#city');
+    let zipEl = document.querySelector('#zipcode');
+    let submitButton = document.querySelector('#submit-order');
+    let orderSummaryParagraph = document.querySelector('#order-summary');
 
-    let submitButton = document.querySelector('#submit-order')
 
-    let orderSummaryParagraph = document.querySelector('#order-summary')
 
+    // submit button
     submitButton.addEventListener('click', function() {
 
-        let name = homeownerNameInput.value
-        let houseNumber = homeownerHouseNumberInput.value
-        let streetName = homeownerStreetNameInput.value
-        let treeType = treeTypeSelect.value
-        let city = cityEl.value
-        let zipCode = zipEl.value
+        // initialization of variables that grab the value of the elements
+        let name = homeownerNameInput.value;
+        let houseNumber = homeownerHouseNumberInput.value;
+        let streetName = homeownerStreetNameInput.value;
+        let treeType = treeTypeSelect.value;
+        let city = cityEl.value;
+        let zipCode = zipEl.value;
+
+        // empty array to store error messages
+        let errors = [];
 
 
-        let errors = []
+        // validate is a function set up down below
+        //if the value of that variable is not true it will push the dedicated message to the errors array
+        if(!validate(name)){errors.push("Please enter your Name")}
+        if(!validate(houseNumber)){errors.push("Please enter you House Number")}
+        if(!validate(streetName)){errors.push("Please enter your Street Name")}
+        if(!validate(treeType)){errors.push("Please enter Tree Type")}
+        if(!validate(city)){errors.push("Please enter your City")}
+        if(!validate(zipCode)){errors.push("Please enter your Zip Code")}
 
-        if(!validate(name)){errors.push("Please enter your Name")};
-        if(!validate(houseNumber)){errors.push("Please enter you House Number")};
-        if(!validate(streetName)){errors.push("Please enter your Street Name")};
-        if(!validate(treeType)){errors.push("Please enter Tree Type")};
-        if(!validate(city)){errors.push("Please enter your City")};
-        if(!validate(zipCode)){errors.push("Please enter your Zip Code")};
-
-
+        // if the array has any elements it will add the messages to the array and have the alert.
         if (errors.length > 0) {
             let errorMsg = errors.join('\n')
             alert(errorMsg)
 
         }
         else {
-
+            // if there are no errors the order summary will print following the template below
             let orderSumTemplate = `| Name: ${name} | Shipping Address: ${houseNumber} ${streetName}
             , ${city} ${zipCode} | Tree Type: ${treeType} |`;
             orderSummaryParagraph.innerHTML = orderSumTemplate
 
 
         }
-
+        // function called validate that tests to see if the value is true or not and returns the value
         function validate(value) {
             if (!value){
                 return false;}

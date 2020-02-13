@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ecc2e801-2fed-4b66-b270-3eccdbf92da0" name="Default Changelist" comment="" />
+    <list default="true" id="ecc2e801-2fed-4b66-b270-3eccdbf92da0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week 3/studentRoster.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week 3/studentRoster.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week 4/labPart1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week 4/labPart1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week 4/labPart2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Week 4/labPart2.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +34,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -72,7 +79,7 @@
       <workItem from="1581019156958" duration="13650000" />
       <workItem from="1581034422188" duration="9670000" />
       <workItem from="1581099945755" duration="1756000" />
-      <workItem from="1581629318687" duration="1891000" />
+      <workItem from="1581629318687" duration="6316000" />
     </task>
     <servers />
   </component>

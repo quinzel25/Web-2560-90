@@ -20,10 +20,13 @@ let iss_location = {
 // TODO Extract the latitude value, and log it to the console.
 // TODO Extract the longitude value, and log it to the console.
 
-let latGrab = iss_location.iss_position.latitude
-let longGrab = iss_location.iss_position.longitude
-console.log('ISS Latitude: ' + latGrab)
-console.log('ISS Longitude: ' + longGrab)
+// this grabs the object that is nested the objects
+let latGrab = iss_location.iss_position.latitude;
+let longGrab = iss_location.iss_position.longitude;
+
+// this prints the objects int the console
+console.log('ISS Latitude: ' + latGrab);
+console.log('ISS Longitude: ' + longGrab);
 
 
 /* b. Use this JavaScript object of exchange rates relative to Euros.
@@ -39,12 +42,17 @@ let rates = {
     "CAD": 1.5194
 };
 
-rates.CHF = 1.1787
-console.log("New Item: " + rates.CHF)
-let euros = 100
-let exchange = rates.AUD
-let euroToAUD = euros * exchange
-console.log("100 Euros in AUD is: " + euroToAUD)
+// this adds the object into the object array
+rates.CHF = 1.1787;
+// print the newly added object in the console
+console.log("New Item: " + rates.CHF);
+
+// math operation to find the the amount of AUD you get from euros
+let euros = 100;
+let exchange = rates.AUD;
+let euroToAUD = euros * exchange;
+// logs to consol
+console.log("100 Euros in AUD is: " + euroToAUD);
 
 // TODO write code to add a new property for Swiss Francs. Symbol is CHF, value is 1.1787.
 // TODO if you had 100 Euros, write code to get the exchange rate from the object, then calculate
@@ -53,9 +61,14 @@ console.log("100 Euros in AUD is: " + euroToAUD)
 //    In other words, identify the property with the largest value. the answer is BRL (Brazilian Real) at 3.8959 BRL to 1 Euro.
 
 // Found this code snippet online, works great!
+
+// initializes the rates object in to a variable
 let arr = Object.values(rates);
-let max = Math.max(...arr)
-console.log(`Max value: ${max}`)
+// this grabs the max value of the values set in the arr variable
+let max = Math.max(...arr);
+
+// prints to console
+console.log(`Max value: ${max}`);
 
 /* c. Use this JavaScript array of objects of cat owners, and their cats. Source, moderncat.com
  */
@@ -66,14 +79,21 @@ let cats_and_owners = [
     { name: "Katy Perry", cat: "Kitty Purry" },
     { name: "Snoop Dogg", cat: "Miles Davis" }
 ];
-let catGrab = cats_and_owners[1].cat
+
+// grabs the elements at index 1 in the object array and grabs element at the second object location: cat
+let catGrab = cats_and_owners[1].cat;
+// prints to console
 console.log(`Gary Olman's cat is named: ${catGrab}`);
-cats_and_owners.push({name: "Taylor Swift", cat: "Meredith"})
+
+// this adds the a new object in the object array
+cats_and_owners.push({name: "Taylor Swift", cat: "Meredith"});
+
+// for loop that grabs the the owners and cats (iterating over i) and prints out the owner and cat (from the template) in the console
 for (let i = 0 ; i < cats_and_owners.length ; i++){
-   //let obj = cats_and_owners[i]
-    let cat = cats_and_owners[i].cat
-    let name = cats_and_owners[i].name
-    let logTemp = `Owner: ${name} Cat: ${cat}`
+
+    let cat = cats_and_owners[i].cat;
+    let name = cats_and_owners[i].name;
+    let logTemp = `Owner: ${name} Cat: ${cat}`;
     console.log(logTemp)
 
 
@@ -218,47 +238,46 @@ let nobel_prize_winners_2017 = {
 
 };
 
-let litFirst = nobel_prize_winners_2017.prizes[3].laureates[0].firstname
-let litLast = nobel_prize_winners_2017.prizes[3].laureates[0].surname
-console.log(`2017 Literature laureate: ${litFirst} ${litLast}`)
+// these variables grab the first and last names of the laureates from the 4th prize; literature
+let litFirst = nobel_prize_winners_2017.prizes[3].laureates[0].firstname;
+let litLast = nobel_prize_winners_2017.prizes[3].laureates[0].surname;
+// prints in the console
+console.log(`2017 Literature laureate: ${litFirst} ${litLast}`);
 
-let count = nobel_prize_winners_2017.prizes[0].laureates.length
+
+// grabs the length of the laureates of the prize with the index of [0]
+let count = nobel_prize_winners_2017.prizes[0].laureates.length;
+// this loop grabs the id of the the laureates (it iterates over laureates) in prize[0] and prints in the console
 for (let i = 0 ; i < count ; i++) {
-    let idGrab = nobel_prize_winners_2017.prizes[0].laureates[i].id
+    let idGrab = nobel_prize_winners_2017.prizes[0].laureates[i].id;
     console.log(`ID = ${idGrab}`)
 }
 
-let count1 = nobel_prize_winners_2017.prizes.length
-//let count2 = nobel_prize_winners_2017.prizes[0].category
-console.log('Categories:')
+// grabs the length
+let count1 = nobel_prize_winners_2017.prizes.length;
+// prints description
+console.log('Categories:');
+
+// this loop grabs the category and prints it in the console (iterates over x)
 for (let x = 0 ; x < count1 ; x++) {
-    let categoryGrab = nobel_prize_winners_2017.prizes[x].category
+    let categoryGrab = nobel_prize_winners_2017.prizes[x].category;
 
     console.log(categoryGrab)
 }
 
-    // let arr = []
-    //
-    //
-    // for (let x = 0 ; x < count1 ; x++) {
-    //     let categoryIterator = nobel_prize_winners_2017.prizes[x].category
-    //     let peopleLength = nobel_prize_winners_2017.prizes[3].laureates.length
-    //     for (let y = 0; y < peopleLength; y++) {
-    //
-    //     }
-    //
-    // }
-    let lauretes  = 0 ;
+   // sets counter to 0
+    let dudes  = 0 ;
+    // grabs the prizes variable
     let prizes = nobel_prize_winners_2017.prizes;
-    prizes.forEach(function (prizes ){
-        for (let laur in prizes.laureates) {
-            lauretes++
+
+    // loop that counts how many laureates there are for 2017
+    prizes.forEach(function (prize ){
+        for (let laur in prize.laureates) {
+            dudes++
         }
 
-    } )
-
-
-    console.log(`Number of Laureates: ${lauretes}`)
+    });
+    console.log(`Number of Laureates: ${dudes}`);
 
 
 
