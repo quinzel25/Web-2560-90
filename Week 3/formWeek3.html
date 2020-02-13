@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+
+<!--labels used for accessibility, text input box so user can input items they would like to add to the list-->
+<label for="textInput" id="inputList">Enter some text to add to the list</label> <br>
+<input id="textInput" type="text">
+
+<!--button to add to the list-->
+<button id="add-to-list">Add</button>
+
+<!--button to clear the list-->
+<button id="clear">Clear</button>
+
+
+<!--this creates an empty list-->
+<ul id="list"></ul>
+
+<!--creates an empty paragraph -->
+<p id="maxList"></p>
+
+<!--beginning of JavaScript block-->
+<script>
+    let addButton = document.querySelector('#add-to-list'); // creates variable for Add button
+    let inputText = document.querySelector('#textInput'); // creates variable for what the user inputs
+    let funList = document.querySelector('#list'); // creates variable for empty list
+    let clearList = document.querySelector('#clear'); // creates variable for clear button
+    let maxListMessage = document.querySelector('#maxList') // creates variable for empty paragraph
+
+
+    addButton.addEventListener('click', function () { // function for the Add button
+        let validText = inputText.value;
+        if (validText.length >1 && validText.length < 50) {
+            maxListMessage.innerHTML = ''; // resets error message
+            if (funList.childElementCount <= 10) { // The list can only contain 10 elements
+                let addText = inputText.value; // grabs what the user typed and puts it into another variable
+                let addTextTag = document.createElement(`li`); // adds <li></li> to the variable
+                addTextTag.innerHTML = addText; // creates the line <li>addtext</li>
+                funList.appendChild(addTextTag); // adds it to the empty list
+            } else {
+                maxListMessage.innerHTML = "Your list cannot exceed 10 items"
+            } // if your list exceeds 10 will display in empty paragraph
+        } else {
+            maxListMessage.innerHTML = "Your input must be between 1 & 50 characters"
+        }
+    });
+
+
+
+    clearList.addEventListener('click', function () { // function for the clear button
+       funList.innerHTML = ''; // resets list to empty
+       maxListMessage.innerHTML = ''; // resets paragraph to empty
+    })
+
+
+</script>
+
+
+
+</body>
+</html>
