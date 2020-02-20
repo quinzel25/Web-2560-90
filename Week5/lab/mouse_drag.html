@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Events</title>
+
+    <style>
+
+        #canvas {
+            border: 1px black solid;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+<P>Drag the mouse on the canvas</P>
+<canvas id="canvas" height="400" width="400"></canvas>
+<br>
+<label for="color">Choose color</label>
+<input id="color" input type="color">
+<br>
+<label for="range">Range</label>
+<input id="range" input type="range" min="1" max="35">
+<br>
+<button id="clear">Clear</button>
+
+
+
+<script>
+
+    // grabs the elements from the input
+    let colorEl = document.querySelector("#color");
+    let rangeEl = document.querySelector("#range");
+
+    // initializes the canvas
+    var canvas = document.getElementById("canvas");
+    // enables you to draw on the context
+    var context = canvas.getContext("2d");
+    // grabs the clear button
+    var clear = document.getElementById("clear");
+
+    var mousedown = false;
+
+    // tracks mouse
+    canvas.addEventListener("mousedown", function() {
+        mousedown = true
+    });
+
+    canvas.addEventListener("mouseup", function() {
+        mousedown = false
+    });
+
+
+    canvas.addEventListener("mousemove", function() {
+        // grabs the value of the input element
+        let colorChange = colorEl.value;
+        let size = rangeEl.value;
+        if (!mousedown) { return; }
+
+        // event is a built-in variable, contains the event that triggered this function
+        // get the x, y location of the event
+        var x = event.offsetX;
+        var y = event.offsetY;   //offsetX, offsetY, may not work in older browsers
+
+        //Draw a filled rectangle centered under the mouse click
+        //x, y is the top left corner, so shift up and left by 5 to center it under the mouse.
+
+        // beginPath needed for circle, arc is for circle
+        context.beginPath();
+        context.arc(x-5, y-5, size, 0, 2 * Math.PI);
+        // changes color based on user input
+        context.fillStyle = colorChange;
+        context.fill();
+    });
+
+    // clears the canvas of data so it can be drawn on again
+    clear.addEventListener("click", function () {
+
+        const context = canvas.getContext('2d');
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+    })
+</script>
+
+</body>
+</html>
