@@ -66,7 +66,7 @@ chart = new Chart(ctx, {
         labels : bridgeName,
         datasets: [{
             label: 'Bridge Length (in meters)',
-            
+
             // calls the list created above
             data: bridgeSpan,
             backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple']

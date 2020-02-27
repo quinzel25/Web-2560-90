@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Fetch- Where's the ISS?</title>
+    <!-- Leaflet script and CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" type="text/css" href="iss.css">
+
+    <script async defer src="iss.js"></script>
+
+</head>
+<body>
+
+<h1>Where is the International Space Station?</h1>
+<div>
+    // this span updates the date on the users laptop
+    <p>At <span id="iss-date"></span> the ISS is over the following coordinates:</p>
+   // the lat and long will be updated using the span tag
+    <p>ISS Latitude: <span id="iss-lat"></span></p>
+    <p>ISS Longitude: <span id="iss-long"></span></p>
+
+</div>
+//div for the map
+<div id="iss-map">
+</div>
+</body>
+</html>
