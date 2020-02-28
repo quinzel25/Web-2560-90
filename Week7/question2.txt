@@ -1,0 +1,12 @@
+Lab 7
+
+Feb 27, 2020
+
+Question 2:
+
+
+The vue error message means that the total variable that we added to the table 
+does not have any value and it and its throwing this error. 
+
+The way that you fix this is adding a computed attribute and adding a function 
+that calculates this.quantity times this.unitPrice and puts it into the total variable.
