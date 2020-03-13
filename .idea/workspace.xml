@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecc2e801-2fed-4b66-b270-3eccdbf92da0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,9 +16,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -87,7 +88,11 @@
       <workItem from="1581629318687" duration="16415000" />
       <workItem from="1582058202866" duration="1317000" />
       <workItem from="1582229372115" duration="22438000" />
-      <workItem from="1582838379181" duration="9842000" />
+      <workItem from="1582838379181" duration="10437000" />
+      <workItem from="1583356609916" duration="679000" />
+      <workItem from="1583445237003" duration="5395000" />
+      <workItem from="1584036769176" duration="10845000" />
+      <workItem from="1584128303230" duration="4986000" />
     </task>
     <servers />
   </component>

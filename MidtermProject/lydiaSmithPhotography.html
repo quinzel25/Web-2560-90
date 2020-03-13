@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lydia Smith</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="lydiaSmithPhotography.css">
+    <link rel="stylesheet" href="lightbox.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script async src="lydiaSmithPhotography.js"></script>
+    <script src="lightbox-plus-jquery.js"></script>
+</head>
+<body>
+<!--Title screen jumbotron section-->
+    <div id="title-page" class="jumbotron">
+        <div class="container">
+            <br><br><br><br><br><br>
+            <h1>LYDIA SMITH</h1>
+            <h3>PHOTOGRAPHER</h3>
+        </div>
+    </div>
+<!--End of section-->
+
+
+<!--Photo Gallery Section-->
+<!--Using a .js and .css library created by Lokesh Dhakar-->
+<div id="gallery">
+  <a href="pics/ginny.jpg" data-lightbox="ginny" data-title="Ginny"><img src="pics/ginny-small2.jpg" alt=""></a>
+
+
+
+
+</div>
+
+
+<!--About Me section-->
+    <div class="container">
+        <div class="row">
+            <div class="col-12-md">
+                <div class="media">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1">About Me</h5>
+                        I have always loved photography. I remember paging through large photo books looking at all the fantastic images. Capturing these incredible places, people and moments. Pulling me into each photographic story.
+
+                        Currently I am a photographer and photo assistant in the Minneapolis area. I spend my time roller skating, hiking, collaborating with other artists and spending time with friends and family.
+                    </div>
+                    <img id="lydia-picture" src="lydia.png" alt="Lydia Smith" >
+                </div>
+            </div>
+        </div>
+    </div>
+<!--End of section-->
+
+<!--Contact form section-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+
+
+            <div id="contact">
+
+                <h1 class="text-center">Contact Me!</h1>
+
+                <div class="alert alert-danger" v-show="errors.length > 0">
+                    <li v-for="error in errors">{{error}}</li>
+                </div>
+                <div class="alert alert-success"v-show="successes.length > 0">
+                    <li v-for="success in successes">{{success}}</li>
+                </div>
+
+                <form>
+                    <div class="form-group">
+                        <label for="formName">Name</label>
+                        <input type="name" class="form-control" id="formName" v-model="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" v-model.trim="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" class="form-control" id="subject" v-model.trim="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="textArea">Message</label>
+                        <textarea class="form-control" id="textArea" rows="3" v-model="textArea"></textarea>
+                    </div>
+
+                    <button class="btn btn-primary" v-on:click.prevent="submit">Submit</button>
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
