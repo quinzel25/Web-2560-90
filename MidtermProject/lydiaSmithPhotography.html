@@ -3,29 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>Lydia Smith</title>
+
+<!--    CSS links  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="lydiaSmithPhotography.css">
-    <link rel="stylesheet" href="lightbox.css">
+    <link rel="stylesheet" type="text/css" href="css/lydiaSmithPhotography.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="css/jarallax.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+<!--    Scripts   -->
+
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script async src="lydiaSmithPhotography.js"></script>
-    <script src="lightbox-plus-jquery.js"></script>
+    <script async src="js/lydiaSmithPhotography.js"></script>
+    <script async src="js/lightbox-plus-jquery.js"></script>
+    <script async src="js/jarallax.min.js"></script>
+
 </head>
 <body>
-<!--Title screen jumbotron section-->
-    <div id="title-page" class="jumbotron">
-        <div class="container">
-            <br><br><br><br><br><br>
+
+<div data-jarallax data-speed="0.2" class="jarallax">
+    <img class="jarallax-img" src="pics/title.jpg" alt="">
+    <div class="demo-table">
+        <div class="title-text">
+            <br><br><br><br><br><br><br><br><br>
             <h1>LYDIA SMITH</h1>
-            <h3>PHOTOGRAPHER</h3>
+            <h5>P   H   O   T   O   G   R   A   P   H   E   R</h5>
+            <div id="nav">
+            <p><a href="#photo-gallery">Portfolio</a> <a href="#about-me">About</a> <a href="#contact-me">Contact</a></p>
+            </div>
         </div>
     </div>
+</div>
+
+<!--<div class="demo-gap">-->
+<!--    <div class="container">-->
+<!--        <p>Smooth parallax scrolling effect for background images using <strong>CSS transforms</strong> with graceful degradation for old browsers. Parallax plugin with <strong>NO dependencies</strong>. jQuery supported. <strong>Youtube</strong> and <strong>Vimeo</strong> parallax supported.</p>-->
+<!--        <p>Plugin for <strong>WordPress</strong> - <a href="https://wordpress.org/plugins/advanced-backgrounds/" target="_blank">https://wordpress.org/plugins/advanced-backgrounds/</a></p>-->
+<!--        <br>-->
+<!--        <a class="github-button" href="https://github.com/nk-o/jarallax" data-size="large" data-icon="octicon-star" data-count-href="/nk-o/jarallax/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star nk-o/jarallax on GitHub">Star</a>-->
+<!--        <a class="github-button" href="https://github.com/nk-o/jarallax/archive/master.zip" data-size="large" aria-label="Download nk-o/jarallax on GitHub">Download</a>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<div data-jarallax data-speed="0.2" class="jarallax">
+    <img class="jarallax-img" src="pics/parallax3.jpg" alt="">
+</div>
+<!--Title screen jumbotron section-->
+<!--    <div id="title-page" class="jumbotron">-->
+<!--        <div class="container">-->
+<!--            <br><br><br><br><br><br>-->
+<!--            <h1>LYDIA SMITH</h1>-->
+<!--            <h3>PHOTOGRAPHER</h3>-->
+<!--        </div>-->
+<!--    </div>-->
 <!--End of section-->
 
 
 <!--Photo Gallery Section-->
 <!--Using a .js and .css library created by Lokesh Dhakar-->
 <div class="gallery">
+    <br>
+    <h2><a name="photo-gallery"></a>Photo Gallery</h2> <br><br>
+
   <a href="pics/ginny.jpg" data-lightbox="mygallery" data-title="Ginny"><img src="pics/ginny-small.jpg" alt=""></a>
   <a href="pics/quinn.jpg" data-lightbox="mygallery" data-title="Quinn"><img src="pics/quinn-small.jpg" alt=""></a>
   <a href="pics/purple.jpg" data-lightbox="mygallery" data-title=""><img src="pics/purple-small.jpg" alt=""></a>
@@ -38,16 +79,12 @@
   <a href="pics/brushes.jpg" data-lightbox="mygallery" data-title=""><img src="pics/brushes-small.jpg" alt=""></a>
 
 
-
-
-
-
-
-
-
-
 </div>
 
+
+<div data-jarallax data-speed="0.2" class="jarallax">
+    <img class="jarallax-img" src="pics/parallax2.jpg" alt="">
+</div>
 
 <!--About Me section-->
     <div class="container">
@@ -55,17 +92,23 @@
             <div class="col-12-md">
                 <div class="media">
                     <div class="media-body">
-                        <h5 class="mt-0 mb-1">About Me</h5>
+                        <h5 class="mt-0 mb-1"> <a name="about-me"> </a>About Me</h5>
+                        <br><br>
                         I have always loved photography. I remember paging through large photo books looking at all the fantastic images. Capturing these incredible places, people and moments. Pulling me into each photographic story.
 
                         Currently I am a photographer and photo assistant in the Minneapolis area. I spend my time roller skating, hiking, collaborating with other artists and spending time with friends and family.
                     </div>
-                    <img id="lydia-picture" src="lydia.png" alt="Lydia Smith" >
+                    <img id="lydia-picture" src="pics/lydia.png" alt="Lydia Smith" >
                 </div>
             </div>
         </div>
     </div>
 <!--End of section-->
+
+
+<div data-jarallax data-speed="0.2" class="jarallax">
+    <img class="jarallax-img" src="pics/parallax1.jpg" alt="">
+</div>
 
 <!--Contact form section-->
 
@@ -76,7 +119,7 @@
 
             <div id="contact">
 
-                <h1 class="text-center">Contact Me!</h1>
+                <h1 class="text-center"><a name="contact-me"></a>Contact Me!</h1>
 
                 <div class="alert alert-danger" v-show="errors.length > 0">
                     <li v-for="error in errors">{{error}}</li>
@@ -115,7 +158,11 @@
     </div>
 
 </div>
+<!--End of contact form section-->
 
+<div data-jarallax data-speed="0.2" class="jarallax">
+    <img class="jarallax-img" src="pics/parallax4.jpg" alt="">
+</div>
 
 </body>
 </html>

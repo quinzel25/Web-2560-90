@@ -1,0 +1,87 @@
+body {
+
+    font-family: 'Roboto';
+}
+
+
+
+#about-me {
+    text-align: center;
+}
+#lydia-picture {
+    width: 38%;
+    height: auto;
+    padding: 30px;
+
+/*  GALLERY CSS  */
+}
+.gallery {
+
+    margin: 10px 50px;
+    text-align: center;
+
+}
+.gallery img {
+    transition: 1s;
+    padding: 15px;
+    width: 275px;
+}
+.gallery img:hover {
+    filter: grayscale(100%);
+    transform: scale(1.1)
+}
+
+/*PARALLAX CSS*/
+.jarallax {
+    position: relative;
+    z-index: 0;
+    height: 100vh;
+}
+.jarallax > .jarallax-img {
+    position: absolute;
+    object-fit: cover;
+
+    font-family: 'object-fit: cover;';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* title */
+.title-text {
+    text-align: center;
+    vertical-align: center;
+    color: white;
+}
+
+/*ALL CONTAINERS*/
+.container {
+    padding: 50px;
+
+}
+
+
+/*Navigation*/
+
+#nav {
+    /*font: 12px/30px Helvetica, sans-serif;*/
+    text-align: center;
+    vertical-align: center;
+}
+
+#nav a {
+    /*background: #444;*/
+    color: #fff;
+    /*margin-right: 30px;*/
+    width: 60px;
+    height: 30px;
+    /*float: left;*/
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease;
+}
+
+#nav a:hover {
+    background: #6fcbf3;
+}

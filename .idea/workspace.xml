@@ -3,11 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="ecc2e801-2fed-4b66-b270-3eccdbf92da0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MidtermProject/lydiaSmithPhotography.css" beforeDir="false" afterPath="$PROJECT_DIR$/MidtermProject/lydiaSmithPhotography.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MidtermProject/forrest1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MidtermProject/forrest2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MidtermProject/lightbox-plus-jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MidtermProject/lightbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MidtermProject/lydia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MidtermProject/lydiaSmithPhotography.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MidtermProject/lydiaSmithPhotography.html" beforeDir="false" afterPath="$PROJECT_DIR$/MidtermProject/lydiaSmithPhotography.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MidtermProject/pics/SmithL_WEB -5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MidtermProject/pics/WEB.people_31.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MidtermProject/pics/smithL_WEB-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MidtermProject/lydiaSmithPhotography.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MidtermProject/pics/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MidtermProject/pics/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MidtermProject/pics/next.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MidtermProject/pics/prev.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MidtermProject/title.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +105,7 @@
       <workItem from="1583445237003" duration="5395000" />
       <workItem from="1584036769176" duration="10845000" />
       <workItem from="1584128303230" duration="5654000" />
-      <workItem from="1584373202282" duration="2782000" />
+      <workItem from="1584373202282" duration="9018000" />
     </task>
     <servers />
   </component>
