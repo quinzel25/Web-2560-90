@@ -13,6 +13,7 @@ let contact = new Vue({
     },
     methods: {
         submit() {
+            this.successes = []
             this.errors = []
             if (this.name && this.email && this.subject && this.textArea) {
 
